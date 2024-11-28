@@ -22,13 +22,3 @@ self.addEventListener("activate", function (e) {
 });
 
 const messaging = firebase.messaging();
-
-// 백그라운드 메시지 처리
-messaging.onBackgroundMessage((payload) => {
-  console.log('Background Message received:', payload);
-  const { title, body } = payload.notification;
-  self.registration.showNotification(title, {
-    body,
-    icon: '/icons/icon-192x192.png',
-  });
-});
