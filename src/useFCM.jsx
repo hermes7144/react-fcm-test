@@ -31,7 +31,7 @@ const useFCM = () => {
     // 포그라운드에서 푸시 메시지를 받을 때
     onMessage(messaging, (payload) => {
       console.log('Message received:', payload);
-      // 알림을 표시하거나 원하는 방식으로 메시지를 처리
+      new Notification('dddd','ddd');
     });
   }, []);
 
